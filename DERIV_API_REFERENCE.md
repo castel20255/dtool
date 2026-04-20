@@ -5,13 +5,10 @@ Deriv APIs are built on WebSocket technology, enabling real-time trading systems
 
 ---
 
-## 1. App IDs Configuration
+## 1. App ID Configuration
 
 ### Current Implementation
-- **Localhost**: 121856
-- **Staging**: 113831
-- **Production**: 121856 (Main), 114784 (BE), 114784 (ME)
-- **Vercel**: 121856
+- **All Environments**: 113831 (Staging)
 
 ### App ID Usage
 App IDs are used to identify your application when connecting to Deriv's WebSocket API. Each registered application has a unique app_id found in the Dashboard → Applications → Application manager.
@@ -101,7 +98,7 @@ wss://ws.derivws.com/websockets/v3?app_id={app_id}
 
 ### Connection Example (JavaScript)
 ```javascript
-const app_id = '121856'; // Replace with your app_id
+const app_id = '113831'; // Staging API
 const socket = new WebSocket(`wss://ws.derivws.com/websockets/v3?app_id=${app_id}`);
 
 socket.onopen = function (e) {
