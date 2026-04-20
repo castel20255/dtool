@@ -34,9 +34,9 @@ export const loginUrl = ({ language }: TLoginUrl) => {
         date_first_contact ? `&date_first_contact=${date_first_contact}` : ''
     }`;
     const getOAuthUrl = () => {
-        // Special strict fix for Vercel Production to avoid any dynamic parameter issues
+        // Special strict fix for Vercel Staging to avoid any dynamic parameter issues
         if (window.location.hostname === 'profithubtool.vercel.app') {
-            return `https://oauth.deriv.com/oauth2/authorize?app_id=121856&l=${language}&brand=deriv`;
+            return `https://oauth.deriv.com/oauth2/authorize?app_id=113831&l=${language}&brand=deriv`;
         }
 
         const current_domain = getCurrentProductionDomain();
