@@ -7,6 +7,14 @@
     color: #e1e7ef;
     font-family: 'Outfit', sans-serif;
 
+    @media (max-width: 768px) {
+        padding: 12px;
+    }
+
+    @media (max-width: 480px) {
+        padding: 8px;
+    }
+
     .scp-grid {
         display: grid;
         grid-template-columns: 1fr 1.5fr;
@@ -15,6 +23,16 @@
 
         @media (max-width: 1024px) {
             grid-template-columns: 1fr;
+        }
+
+        @media (max-width: 768px) {
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        @media (max-width: 480px) {
+            gap: 12px;
+            margin-bottom: 12px;
         }
     }
 
@@ -28,6 +46,16 @@
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         position: relative;
         overflow: hidden;
+
+        @media (max-width: 768px) {
+            padding: 16px;
+            border-radius: 12px;
+        }
+
+        @media (max-width: 480px) {
+            padding: 12px;
+            border-radius: 10px;
+        }
 
         &::before {
             content: '';
@@ -88,6 +116,12 @@
             grid-template-columns: 1fr 1fr;
             gap: 16px;
             margin-bottom: 20px;
+
+            @media (max-width: 768px) {
+                grid-template-columns: 1fr;
+                gap: 12px;
+                margin-bottom: 16px;
+            }
         }
 
         .field-group {
@@ -200,6 +234,14 @@
             grid-template-columns: repeat(3, 1fr);
             gap: 16px;
 
+            @media (max-width: 1024px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @media (max-width: 480px) {
+                grid-template-columns: 1fr;
+            }
+
             .stat-item {
                 background: rgba(13, 17, 23, 0.6);
                 border: 1px solid rgba(255, 255, 255, 0.05);
@@ -297,6 +339,14 @@
             flex-direction: column;
             max-height: 250px;
 
+            @media (max-width: 768px) {
+                max-height: 200px;
+            }
+
+            @media (max-width: 480px) {
+                max-height: 150px;
+            }
+
             .log-header {
                 display: flex;
                 align-items: center;
@@ -375,6 +425,10 @@
     .market-visuals {
         margin-bottom: 24px;
 
+        @media (max-width: 768px) {
+            margin-bottom: 16px;
+        }
+
         .visuals-grid {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
@@ -383,6 +437,16 @@
 
             @media (max-width: 1200px) {
                 grid-template-columns: 1fr;
+            }
+
+            @media (max-width: 768px) {
+                gap: 16px;
+                padding: 16px;
+            }
+
+            @media (max-width: 480px) {
+                gap: 12px;
+                padding: 12px;
             }
         }
     }
